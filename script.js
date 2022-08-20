@@ -14,3 +14,13 @@ console.log($.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=sou
 ////////////////
 ///Cached Elements
 ///////////////
+    //buttons//
+const $marg = $('#marg')
+const $martini = $('#martini')
+const $sour = $('#sour')
+const $random = $('#random')
+    //elements to populate with APi info//
+const $imgContainer = $('#picture') // Need to create img tag to append here
+const $ingredients = $('#indredients') // Need to create ul and li tags to append here
+const $instructions = $('#instructions') //Need to create ol and li tags to append here
+
