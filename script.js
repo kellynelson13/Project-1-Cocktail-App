@@ -42,29 +42,42 @@ function handleRandom (e){
             $title.text(data.drinks[0].strDrink);
             /////Adding ingredients below//////
             $imgContainer.html(`<img src="${data.drinks[0].strDrinkThumb}" alt="${data.drinks[0].strDrink}" />`)
+
+            
             if(data.drinks[0].strIngredient1){
                 $ingredients.html(`<li>${data.drinks[0].strIngredient1}</li>`)
+                if(data.drinks[0].strMeasure1){
+                    $ingredients.html(`<li>${data.drinks[0].strMeasure1} ${data.drinks[0].strIngredient1}</li>`)
+                }
             }
             if(data.drinks[0].strIngredient2){
                 $ingredients.append(`<li>${data.drinks[0].strIngredient2}</li>`)
+                if(data.drinks[0].strMeasure2){
+                    $ingredients.html(`<li>${data.drinks[0].strMeasure2} ${data.drinks[0].strIngredient2}</li>`)
+                }
             }
             if(data.drinks[0].strIngredient3){
                 $ingredients.append(`<li>${data.drinks[0].strIngredient3}</li>`)
+                if(data.drinks[0].strMeasure3){
+                    $ingredients.html(`<li>${data.drinks[0].strMeasure3} ${data.drinks[0].strIngredient3}</li>`)
+                }
             }
+            
             if(data.drinks[0].strIngredient4){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient4}</li>`)
+                $ingredients.append(`<li>${data.drinks[0].strMeasure4} ${data.drinks[0].strIngredient4}</li>`)
             }
             if(data.drinks[0].strIngredient5){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient5}</li>`)
+                $ingredients.append(`<li>${data.drinks[0].strMeasure5} ${data.drinks[0].strIngredient5}</li>`)
             }
             if(data.drinks[0].strIngredient6){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient6}</li>`)
+                $ingredients.append(`<li>${data.drinks[0].strMeasure6} ${data.drinks[0].strIngredient6}</li>`)
             }
             if(data.drinks[0].strIngredient7){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient7}</li>`)
+                $ingredients.append(`<li>${data.drinks[0].strMeasure7} ${data.drinks[0].strIngredient7}</li>`)
             }
             ///////Adding instruction below///////
-        }, function (err){
+
+        }, function (error){
             console.log("Something is terribly wrong")
         })
 }
