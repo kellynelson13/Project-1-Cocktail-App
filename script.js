@@ -6,10 +6,10 @@
 ////in success functions render necessary data on the page and preventDefault
 ////for the randoms sour, marg, and martini, create random index 
 console.log('https://www.thecocktaildb.com/api/json/v1/1/random.php')
-console.log($.ajax('https://www.thecocktaildb.com/api/json/v1/1/random.php'))
-console.log($.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'))
-console.log($.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=martini'))
-console.log($.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=sour'))
+// console.log($.ajax('https://www.thecocktaildb.com/api/json/v1/1/random.php'))
+// console.log($.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'))
+// console.log($.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=martini'))
+// console.log($.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=sour'))
 
 ////////////////
 ///Cached Elements
@@ -31,6 +31,7 @@ const $title = $('#title')
 // Event Listeners
 /////////////////
 $random.click(handleRandom);
+$marg.click(handleMarg);
 ////////////////
 ////Functions
 ///////////////
@@ -89,9 +90,15 @@ function handleRandom (e){
             ///////Adding instruction below///////
             $instructions.html(`Instructions:<br><br>${data.drinks[0].strInstructions}`)
 
-
         }, function (error){
             console.log("Something is terribly wrong")
         })
-}
+    }
+
+    function handleMarg(e){
+        e.preventDefault();
+        $.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita').then(function(data){
+            console.log(data);
+        })
+    }
 
