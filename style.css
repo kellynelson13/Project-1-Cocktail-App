@@ -30,11 +30,37 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;   
+    margin-bottom: 20px;
 }
 button {
     padding: 10px;
     margin: 5px;
     background-color: rgb(223, 105, 72);
-    border: solid white 3px;
+    border: solid white 2px;
+    border-radius: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+#title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin: 0 auto;
+    background-color: rgb(223, 105, 72);
+    width: 50%;
+    display: flex;
+    justify-content: center;
     border-radius: 10px;
 }
+
+img {
+    border: 15px solid rgb(244, 241, 241);
+    border-radius: 4px;
+    padding: 5px;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
