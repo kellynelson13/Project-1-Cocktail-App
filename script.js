@@ -36,9 +36,11 @@ $sour.click(handleSour);
 ///////////////
 function handleRandom (e){
     e.preventDefault();
+    $('#recipe').addClass('recipe');
     $.ajax('https://www.thecocktaildb.com/api/json/v1/1/random.php')
         .then(function (data){
             //console.log(data)
+            
             ///Adding title below/////
             $title.text(data.drinks[0].strDrink);
             //// Adding image below/////
@@ -47,7 +49,7 @@ function handleRandom (e){
             $ingredients.empty();
 
             if(data.drinks[0].strIngredient1 && data.drinks[0].strMeasure1){
-                $ingredients.append(`<li>${data.drinks[0].strMeasure1} ${data.drinks[0].strIngredient1}</li>`)
+                $ingredients.append(`Ingredients:<br><br><li>${data.drinks[0].strMeasure1} ${data.drinks[0].strIngredient1}</li>`)
             } else if(data.drinks[0].strIngredient1){
                 $ingredients.append(`<li>${data.drinks[0].strIngredient1}</li>`)
             }        
@@ -96,6 +98,7 @@ function handleRandom (e){
 
 function handleMarg(e){
     e.preventDefault();
+    $('#recipe').addClass('recipe');
     $.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
         .then(function(data){
             //console.log(data);
@@ -108,7 +111,7 @@ function handleMarg(e){
              $ingredients.empty();
 
              if(data.drinks[0].strIngredient1 && data.drinks[randIndex].strMeasure1){
-                 $ingredients.append(`<li>${data.drinks[randIndex].strMeasure1} ${data.drinks[randIndex].strIngredient1}</li>`)
+                 $ingredients.append(`Ingredients:<br><br><li>${data.drinks[randIndex].strMeasure1} ${data.drinks[randIndex].strIngredient1}</li>`)
              } else if(data.drinks[randIndex].strIngredient1){
                  $ingredients.append(`<li>${data.drinks[randIndex].strIngredient1}</li>`)
              }        
@@ -157,6 +160,7 @@ function handleMarg(e){
 
 function handleMartini(e) {
     e.preventDefault();
+    $('#recipe').addClass('recipe');
     $.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=martini')
         .then(function(data) {
             console.log(data)
@@ -169,7 +173,7 @@ function handleMartini(e) {
              $ingredients.empty();
 
              if(data.drinks[0].strIngredient1 && data.drinks[randIndex].strMeasure1){
-                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure1} ${data.drinks[randIndex].strIngredient1}</li>`)
+                $ingredients.append(`Ingredients:<br><br><li>${data.drinks[randIndex].strMeasure1} ${data.drinks[randIndex].strIngredient1}</li>`)
             } else if(data.drinks[randIndex].strIngredient1){
                 $ingredients.append(`<li>${data.drinks[randIndex].strIngredient1}</li>`)
             }        
@@ -218,6 +222,7 @@ function handleMartini(e) {
 
 function handleSour(e) {
     e.preventDefault();
+    $('#recipe').addClass('recipe');
     $.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=sour')
         .then(function(data) {
             console.log(data)
@@ -230,7 +235,7 @@ function handleSour(e) {
              $ingredients.empty();
 
              if(data.drinks[0].strIngredient1 && data.drinks[randIndex].strMeasure1){
-                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure1} ${data.drinks[randIndex].strIngredient1}</li>`)
+                $ingredients.append(`Ingredients:<br><br><li>${data.drinks[randIndex].strMeasure1} ${data.drinks[randIndex].strIngredient1}</li>`)
             } else if(data.drinks[randIndex].strIngredient1){
                 $ingredients.append(`<li>${data.drinks[randIndex].strIngredient1}</li>`)
             }        

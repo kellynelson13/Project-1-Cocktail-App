@@ -58,18 +58,20 @@ img {
     border: 15px solid rgb(244, 241, 241);
     border-radius: 4px;
     padding: 5px;
-    width: 65%;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
   }
 
-  #recipe {
+  .recipe {
     background-color: rgb(223, 105, 72);
     margin: 20px 60px;
     font-family: 'Playfair Display', serif;
     border-radius: 10px;
     padding: 5px 10px;
     text-align: justify;
+
   }
+  
