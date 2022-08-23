@@ -85,9 +85,19 @@ img {
         margin: 20px auto;
         font-size: 20px;
     }
+    .recipe {
+        width: 50%;
+        margin: 20px auto;
+        text-align: justify;
+    }
   }
   @media only screen and (min-width: 1024px) {
     #welcome {
         width: 50%;
+    }
+    .recipe {
+        width: 50%;
+        margin: 20px auto;
+        text-align: justify;
     }
   }
