@@ -39,58 +39,7 @@ function handleRandom (e){
     $('#recipe').addClass('recipe');
     $.ajax('https://www.thecocktaildb.com/api/json/v1/1/random.php')
         .then(function (data){
-            //console.log(data)
-            
-            ///Adding title below/////
-            $title.text(data.drinks[0].strDrink);
-            //// Adding image below/////
-            $imgContainer.html(`<img src="${data.drinks[0].strDrinkThumb}" alt="${data.drinks[0].strDrink}" />`)
-             /////Adding ingredients below//////
-            $ingredients.empty();
-
-            if(data.drinks[0].strIngredient1 && data.drinks[0].strMeasure1){
-                $ingredients.append(`Ingredients:<br><br><li>${data.drinks[0].strMeasure1} ${data.drinks[0].strIngredient1}</li>`)
-            } else if(data.drinks[0].strIngredient1){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient1}</li>`)
-            }        
-            if(data.drinks[0].strIngredient2 && data.drinks[0].strMeasure2){
-                $ingredients.append(`<li>${data.drinks[0].strMeasure2} ${data.drinks[0].strIngredient2}</li>`)
-            } else if(data.drinks[0].strIngredient2){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient2}</li>`)
-            }  
-            if(data.drinks[0].strIngredient3 && data.drinks[0].strMeasure3){
-                $ingredients.append(`<li>${data.drinks[0].strMeasure3} ${data.drinks[0].strIngredient3}</li>`)
-            } else if(data.drinks[0].strIngredient3){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient3}</li>`)
-            }    
-            if(data.drinks[0].strIngredient4 && data.drinks[0].strMeasure4){
-                $ingredients.append(`<li>${data.drinks[0].strMeasure4} ${data.drinks[0].strIngredient4}</li>`)
-            } else if(data.drinks[0].strIngredient4){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient4}</li>`)
-            }
-            if(data.drinks[0].strIngredient5 && data.drinks[0].strMeasure5){
-                $ingredients.append(`<li>${data.drinks[0].strMeasure5} ${data.drinks[0].strIngredient5}</li>`)
-            } else if(data.drinks[0].strIngredient5){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient5}</li>`)
-            }
-            if(data.drinks[0].strIngredient6 && data.drinks[0].strMeasure6){
-                $ingredients.append(`<li>${data.drinks[0].strMeasure6} ${data.drinks[0].strIngredient6}</li>`)
-            } else if(data.drinks[0].strIngredient6){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient6}</li>`)
-            }
-            if(data.drinks[0].strIngredient7 && data.drinks[0].strMeasure7){
-                $ingredients.append(`<li>${data.drinks[0].strMeasure7} ${data.drinks[0].strIngredient7}</li>`)
-            } else if(data.drinks[0].strIngredient7){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient7}</li>`)
-            }
-            if(data.drinks[0].strIngredient8 && data.drinks[0].strMeasure8){
-                $ingredients.append(`<li>${data.drinks[0].strMeasure8} ${data.drinks[0].strIngredient8}</li>`)
-            } else if(data.drinks[0].strIngredient8){
-                $ingredients.append(`<li>${data.drinks[0].strIngredient8}</li>`)
-            }
-            ///////Adding instruction below///////
-            $instructions.html(`Instructions:<br><br>${data.drinks[0].strInstructions}`)
-
+            render(data, 0);
         }, function (error){
             console.log("Something is wrong")
         })
