@@ -14,6 +14,7 @@ A simple web application that allows you to click a button to get a picture and 
 - Google Fonts
 
 ## Screenshots
+![Welcome Image](/Users/kellynelson/Desktop/seirTitan/unit1/project1-app/Photos for README/Screen Shot 2022-08-23 at 10.41.55 AM.png)
 
 ## Getting Started
 
