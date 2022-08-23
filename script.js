@@ -282,3 +282,56 @@ function handleSour(e) {
         })
 }
 
+function render (data) {
+    const randIndex = Math.floor(Math.random() * data.drinks.length)
+            ///Adding title below/////
+            $title.text(data.drinks[randIndex].strDrink);
+            //// Adding image below/////
+            $imgContainer.html(`<img src="${data.drinks[randIndex].strDrinkThumb}" alt="${data.drinks[randIndex].strDrink}" />`)
+             /////Adding ingredients below//////
+             $ingredients.empty();
+
+             if(data.drinks[0].strIngredient1 && data.drinks[randIndex].strMeasure1){
+                $ingredients.append(`Ingredients:<br><br><li>${data.drinks[randIndex].strMeasure1} ${data.drinks[randIndex].strIngredient1}</li>`)
+            } else if(data.drinks[randIndex].strIngredient1){
+                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient1}</li>`)
+            }        
+            if(data.drinks[randIndex].strIngredient2 && data.drinks[randIndex].strMeasure2){
+                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure2} ${data.drinks[randIndex].strIngredient2}</li>`)
+            } else if(data.drinks[randIndex].strIngredient2){
+                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient2}</li>`)
+            }  
+            if(data.drinks[randIndex].strIngredient3 && data.drinks[randIndex].strMeasure3){
+                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure3} ${data.drinks[randIndex].strIngredient3}</li>`)
+            } else if(data.drinks[randIndex].strIngredient3){
+                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient3}</li>`)
+            }    
+            if(data.drinks[randIndex].strIngredient4 && data.drinks[randIndex].strMeasure4){
+                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure4} ${data.drinks[randIndex].strIngredient4}</li>`)
+            } else if(data.drinks[randIndex].strIngredient4){
+                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient4}</li>`)
+            }
+            if(data.drinks[randIndex].strIngredient5 && data.drinks[randIndex].strMeasure5){
+                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure5} ${data.drinks[randIndex].strIngredient5}</li>`)
+            } else if(data.drinks[randIndex].strIngredient5){
+                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient5}</li>`)
+            }
+            if(data.drinks[randIndex].strIngredient6 && data.drinks[randIndex].strMeasure6){
+                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure6} ${data.drinks[randIndex].strIngredient6}</li>`)
+            } else if(data.drinks[randIndex].strIngredient6){
+                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient6}</li>`)
+            }
+            if(data.drinks[randIndex].strIngredient7 && data.drinks[randIndex].strMeasure7){
+                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure7} ${data.drinks[randIndex].strIngredient7}</li>`)
+            } else if(data.drinks[randIndex].strIngredient7){
+                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient7}</li>`)
+            }
+            if(data.drinks[randIndex].strIngredient8 && data.drinks[randIndex].strMeasure8){
+                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure8} ${data.drinks[randIndex].strIngredient8}</li>`)
+            } else if(data.drinks[randIndex].strIngredient8){
+                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient8}</li>`)
+            }
+            ///////Adding instruction below///////
+           $instructions.html(`Instructions:<br><br>${data.drinks[randIndex].strInstructions}`)
+
+}
