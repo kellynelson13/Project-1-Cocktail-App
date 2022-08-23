@@ -21,5 +21,7 @@ Scroll down a bit to find the recipe:
 ![Cocktail Recipe](photos-for-readme/Screen%20Shot%202022-08-23%20at%2010.43.22%20AM.png)
 
 ## Getting Started
+Click [here](https://kellynelson13.github.io/Project-1-Cocktail-App/) to view the site!  Read the welcome message and have fun!
 
 ## Future Enhancements
+- More specific cocktail randomizer buttons
