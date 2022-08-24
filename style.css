@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-white-color: white;
+    --main-bg-orange: rgb(223, 105, 72);
+    --welcome-bg: rgba(0,0,0,0.5);
+    --button-bg: rgb(203, 51, 9);
+}
+
 body {
     background-image: url(https://images.unsplash.com/photo-1582837611539-e3020079eab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNvY2t0YWlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60ttps://images.unsplash.com/photo-1581927692308-be9e43b4d860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvY2t0YWlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
     background-size: cover;
@@ -16,7 +23,7 @@ h1 {
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 40px;
-    color: white;
+    color: var(--main-white-color);
 }
 
 #welcome {
@@ -24,8 +31,11 @@ h1 {
     line-height: 1.5;
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.7px;
-    color: white;
+    color: var(--main-white-color);
     margin: 30px;
+    background-color: var(--welcome-bg);
+    border-radius: 10px;
+    padding: 16px;
 }
 #buttons {
     text-align: center;
@@ -37,19 +47,24 @@ h1 {
 button {
     padding: 10px;
     margin: 5px;
-    background-color: rgb(223, 105, 72);
-    border: solid white 2px;
+    background-color: var(--main-bg-orange);
+    border: solid var(--main-white-color) 2px;
     border-radius: 10px;
     font-family: 'Playfair Display', serif;
+    box-shadow: 0 4px #666;
+}
+
+button:hover {
+    background-color: var(--button-bg);
 }
 
 #title {
     font-family: 'Playfair Display', serif;
     text-align: center;
     font-size: 25px;
-    color: white;
+    color: var(--main-white-color);
     margin: 0 auto;
-    background-color: rgb(223, 105, 72);
+    background-color: var(--main-bg-orange);
     width: 50%;
     display: flex;
     justify-content: center;
@@ -57,9 +72,8 @@ button {
 }
 
 img {
-    border: 15px solid rgb(244, 241, 241);
+    border: 5px solid var(--main-white-color);
     border-radius: 4px;
-    padding: 5px;
     width: 60%;
     display: flex;
     align-items: center;
@@ -68,7 +82,7 @@ img {
   }
 
   .recipe {
-    background-color: rgb(223, 105, 72);
+    background-color: var(--main-bg-orange);
     margin: 20px 60px;
     font-family: 'Playfair Display', serif;
     border-radius: 10px;
@@ -103,4 +117,36 @@ img {
         margin: 20px auto;
         text-align: justify;
     }
+    img {
+        width: 40%;
+    }
+    #title {
+        width: 40%;
+    }
+  }
+
+  header button {
+    position: absolute;
+    right: 10px;
+    top: 22px;
+  }
+
+  label {
+    color: var(--main-white-color);
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-family: 'Shadows Into Light', cursive;
+  }
+
+  .lightMode {
+    --main-white-color: black;
+    --main-bg-orange: rgb(243, 206, 196);
+    --welcome-bg: rgba(255, 255, 255, 0.7);
+    --button-bg: rgb(235, 139, 112);
+    background-image: url(https://images.unsplash.com/photo-1617736674449-cf6da37a51f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fGNvY2t0YWlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    background-position: center center;
   }
