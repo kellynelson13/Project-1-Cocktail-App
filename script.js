@@ -50,7 +50,8 @@ function handleMarg(e){
     $('#recipe').addClass('recipe');
     $.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
         .then(function(data){
-            render(data);
+            const randIndex = Math.floor(Math.random() * data.drinks.length)
+            render(data, randIndex);
         }, function (error){
             console.log("Something went wrong")
         })
@@ -61,7 +62,8 @@ function handleMartini(e) {
     $('#recipe').addClass('recipe');
     $.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=martini')
         .then(function(data) {
-            render(data);
+            const randIndex = Math.floor(Math.random() * data.drinks.length)
+            render(data, randIndex);
         }, function(error) {
             console.log("Something went wrong")
         })
@@ -72,62 +74,82 @@ function handleSour(e) {
     $('#recipe').addClass('recipe');
     $.ajax('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=sour')
         .then(function(data) {
-            render(data);
+            const randIndex = Math.floor(Math.random() * data.drinks.length)
+            render(data, randIndex);
         }, function(error) {
             console.log("Something went wrong")
         })
 }
 
-function render (data) {
-    const randIndex = Math.floor(Math.random() * data.drinks.length)
+function render (data, index) {
             ///Adding title below/////
-            $title.text(data.drinks[randIndex].strDrink);
+            $title.text(data.drinks[index].strDrink);
             //// Adding image below/////
-            $imgContainer.html(`<img src="${data.drinks[randIndex].strDrinkThumb}" alt="${data.drinks[randIndex].strDrink}" />`)
+            $imgContainer.html(`<img src="${data.drinks[index].strDrinkThumb}" alt="${data.drinks[index].strDrink}" />`)
              /////Adding ingredients below//////
              $ingredients.empty();
 
-             if(data.drinks[0].strIngredient1 && data.drinks[randIndex].strMeasure1){
-                $ingredients.append(`Ingredients:<br><br><li>${data.drinks[randIndex].strMeasure1} ${data.drinks[randIndex].strIngredient1}</li>`)
-            } else if(data.drinks[randIndex].strIngredient1){
-                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient1}</li>`)
+             if(data.drinks[0].strIngredient1 && data.drinks[index].strMeasure1){
+                $ingredients.append(`Ingredients:<br><br><li>${data.drinks[index].strMeasure1} ${data.drinks[index].strIngredient1}</li>`)
+            } else if(data.drinks[index].strIngredient1){
+                $ingredients.append(`<li>${data.drinks[index].strIngredient1}</li>`)
             }        
-            if(data.drinks[randIndex].strIngredient2 && data.drinks[randIndex].strMeasure2){
-                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure2} ${data.drinks[randIndex].strIngredient2}</li>`)
-            } else if(data.drinks[randIndex].strIngredient2){
-                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient2}</li>`)
+            if(data.drinks[index].strIngredient2 && data.drinks[index].strMeasure2){
+                $ingredients.append(`<li>${data.drinks[index].strMeasure2} ${data.drinks[index].strIngredient2}</li>`)
+            } else if(data.drinks[index].strIngredient2){
+                $ingredients.append(`<li>${data.drinks[index].strIngredient2}</li>`)
             }  
-            if(data.drinks[randIndex].strIngredient3 && data.drinks[randIndex].strMeasure3){
-                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure3} ${data.drinks[randIndex].strIngredient3}</li>`)
-            } else if(data.drinks[randIndex].strIngredient3){
-                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient3}</li>`)
+            if(data.drinks[index].strIngredient3 && data.drinks[index].strMeasure3){
+                $ingredients.append(`<li>${data.drinks[index].strMeasure3} ${data.drinks[index].strIngredient3}</li>`)
+            } else if(data.drinks[index].strIngredient3){
+                $ingredients.append(`<li>${data.drinks[index].strIngredient3}</li>`)
             }    
-            if(data.drinks[randIndex].strIngredient4 && data.drinks[randIndex].strMeasure4){
-                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure4} ${data.drinks[randIndex].strIngredient4}</li>`)
-            } else if(data.drinks[randIndex].strIngredient4){
-                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient4}</li>`)
+            if(data.drinks[index].strIngredient4 && data.drinks[index].strMeasure4){
+                $ingredients.append(`<li>${data.drinks[index].strMeasure4} ${data.drinks[index].strIngredient4}</li>`)
+            } else if(data.drinks[index].strIngredient4){
+                $ingredients.append(`<li>${data.drinks[index].strIngredient4}</li>`)
             }
-            if(data.drinks[randIndex].strIngredient5 && data.drinks[randIndex].strMeasure5){
-                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure5} ${data.drinks[randIndex].strIngredient5}</li>`)
-            } else if(data.drinks[randIndex].strIngredient5){
-                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient5}</li>`)
+            if(data.drinks[index].strIngredient5 && data.drinks[index].strMeasure5){
+                $ingredients.append(`<li>${data.drinks[index].strMeasure5} ${data.drinks[index].strIngredient5}</li>`)
+            } else if(data.drinks[index].strIngredient5){
+                $ingredients.append(`<li>${data.drinks[index].strIngredient5}</li>`)
             }
-            if(data.drinks[randIndex].strIngredient6 && data.drinks[randIndex].strMeasure6){
-                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure6} ${data.drinks[randIndex].strIngredient6}</li>`)
-            } else if(data.drinks[randIndex].strIngredient6){
-                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient6}</li>`)
+            if(data.drinks[index].strIngredient6 && data.drinks[index].strMeasure6){
+                $ingredients.append(`<li>${data.drinks[index].strMeasure6} ${data.drinks[index].strIngredient6}</li>`)
+            } else if(data.drinks[index].strIngredient6){
+                $ingredients.append(`<li>${data.drinks[index].strIngredient6}</li>`)
             }
-            if(data.drinks[randIndex].strIngredient7 && data.drinks[randIndex].strMeasure7){
-                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure7} ${data.drinks[randIndex].strIngredient7}</li>`)
-            } else if(data.drinks[randIndex].strIngredient7){
-                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient7}</li>`)
+            if(data.drinks[index].strIngredient7 && data.drinks[index].strMeasure7){
+                $ingredients.append(`<li>${data.drinks[index].strMeasure7} ${data.drinks[index].strIngredient7}</li>`)
+            } else if(data.drinks[index].strIngredient7){
+                $ingredients.append(`<li>${data.drinks[index].strIngredient7}</li>`)
             }
-            if(data.drinks[randIndex].strIngredient8 && data.drinks[randIndex].strMeasure8){
-                $ingredients.append(`<li>${data.drinks[randIndex].strMeasure8} ${data.drinks[randIndex].strIngredient8}</li>`)
-            } else if(data.drinks[randIndex].strIngredient8){
-                $ingredients.append(`<li>${data.drinks[randIndex].strIngredient8}</li>`)
+            if(data.drinks[index].strIngredient8 && data.drinks[index].strMeasure8){
+                $ingredients.append(`<li>${data.drinks[index].strMeasure8} ${data.drinks[index].strIngredient8}</li>`)
+            } else if(data.drinks[index].strIngredient8){
+                $ingredients.append(`<li>${data.drinks[index].strIngredient8}</li>`)
+            }
+            if(data.drinks[index].strIngredient9 && data.drinks[index].strMeasure9){
+                $ingredients.append(`<li>${data.drinks[index].strMeasure9} ${data.drinks[index].strIngredient9}</li>`)
+            } else if(data.drinks[index].strIngredient9){
+                $ingredients.append(`<li>${data.drinks[index].strIngredient9}</li>`)
             }
             ///////Adding instruction below///////
-           $instructions.html(`Instructions:<br><br>${data.drinks[randIndex].strInstructions}`)
+           $instructions.html(`Instructions:<br><br>${data.drinks[index].strInstructions}`)
 
+}
+
+////Toggle Button:
+const $toggle = $('#toggle')
+////Body to change themes:
+const $body = $('body')
+
+$toggle.click(toggleMode);
+
+function toggleMode () {
+    if($body.hasClass('lightMode')){
+        $body.removeClass('lightMode')
+    } else {
+        $body.addClass('lightMode')
+    }
 }
