@@ -14,11 +14,14 @@ A simple web application that allows you to click a button to get a picture and 
 - Google Fonts
 
 ## Screenshots
-![Welcome Image](photos-for-readme/Screen%20Shot%202022-08-23%20at%2010.41.55%20AM.png)
-Once a button has been selected:
-![Cocktail Image](photos-for-readme/Screen%20Shot%202022-08-23%20at%2010.43.13%20AM.png)
-Scroll down a bit to find the recipe:
-![Cocktail Recipe](photos-for-readme/Screen%20Shot%202022-08-23%20at%2010.43.22%20AM.png)
+Welcome:
+![Welcome](photos-for-readme/Screen%20Shot%202022-08-24%20at%2010.57.37%20AM.png)
+Photo of cocktail once you've clicked on a button:
+![Photo of cocktail](photos-for-readme/Screen%20Shot%202022-08-24%20at%2010.58.17%20AM.png)
+Scroll down a bit to see the recipe:
+![Recipe](photos-for-readme/Screen%20Shot%202022-08-24%20at%2010.58.29%20AM.png)
+Web App in light mode:
+![Light Mode](photos-for-readme/Screen%20Shot%202022-08-24%20at%2010.59.14%20AM.png)
 
 ## Getting Started
 Click [here](https://kellynelson13.github.io/Project-1-Cocktail-App/) to view the site!  Read the welcome message and have fun!
