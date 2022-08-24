@@ -17,9 +17,9 @@ A simple web application that allows you to click a button to get a picture and 
 Welcome:
 ![Welcome](photos-for-readme/Screen%20Shot%202022-08-24%20at%2010.57.37%20AM.png)
 Photo of cocktail once you've clicked on a button:
-![Photo of cocktail](photos-for-readme/Screen%20Shot%202022-08-24%20at%2010.58.17%20AM.png)
+![Cocktail Photo](photos-for-readme/Screen%20Shot%202022-08-24%20at%2012.08.03%20PM.png)
 Scroll down a bit to see the recipe:
-![Recipe](photos-for-readme/Screen%20Shot%202022-08-24%20at%2010.58.29%20AM.png)
+![Cocktail Recipe](photos-for-readme/Screen%20Shot%202022-08-24%20at%2012.08.14%20PM.png)
 Web App in light mode:
 ![Light Mode](photos-for-readme/Screen%20Shot%202022-08-24%20at%2010.59.14%20AM.png)
 
