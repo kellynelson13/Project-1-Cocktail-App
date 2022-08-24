@@ -7,6 +7,7 @@
     --main-bg-orange: rgb(223, 105, 72);
     --welcome-bg: rgba(0,0,0,0.5);
     --button-bg: rgb(203, 51, 9);
+    --footer-bg: black;
 }
 
 body {
@@ -92,6 +93,7 @@ img {
   }
   footer {
     height: 20px;
+    background-color: var(--footer-bg);
   }
 
   @media only screen and (min-width: 768px) {
@@ -145,6 +147,7 @@ img {
     --main-bg-orange: rgb(243, 206, 196);
     --welcome-bg: rgba(255, 255, 255, 0.7);
     --button-bg: rgb(235, 139, 112);
+    --footer-bg: white;
     background-image: url(https://images.unsplash.com/photo-1617736674449-cf6da37a51f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fGNvY2t0YWlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
     background-size: cover;
     height: 100vh;
