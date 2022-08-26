@@ -12,6 +12,8 @@ A simple web application that allows you to click a button to get a picture and 
 - JavaScript
 - jQuery
 - Google Fonts
+- AJAX
+- API: https://www.thecocktaildb.com/api.php
 
 ## Screenshots
 Welcome:
