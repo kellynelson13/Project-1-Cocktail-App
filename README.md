@@ -26,7 +26,7 @@ Web App in light mode:
 ![Light Mode](photos-for-readme/Screen%20Shot%202022-08-24%20at%2010.59.14%20AM.png)
 
 ## Getting Started
-Click [here](https://kellynelson13.github.io/Project-1-Cocktail-App/) to view the site!  Read the welcome message and have fun!
+Click [here](https://kellynelson13.github.io/Tipsy-Turvey-Cocktail-App/) to view the site!  Read the welcome message and have fun!
 
 ## Future Enhancements
 - More specific cocktail randomizer buttons
